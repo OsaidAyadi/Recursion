@@ -79,3 +79,153 @@ function repeatStr2(str,str2) {
     }
 
 
+    // exe 7
+
+    function  multiOf (num1,num2,num3) {
+        if (num3===0){
+            return num1;
+        }
+
+
+
+        return  ( num2* multiOf (num1,num2,num3-1) );
+    }
+
+    //   exe 8
+
+
+    function  muti2 (num1,num2) {
+        if (num1===num2){
+            return num1;
+        }
+
+        return num1* muti2 (num1+1,num2);
+
+    }
+
+    // exe 9 
+
+    function  numberBetweenUs (num1,num2) {
+
+        if (num1===num2-1){
+        return "";
+    }
+
+            if (num1 === num2-2 ){
+         return (num1+1)  +  ""  +  numberBetweenUs (num1+1,num2) ;
+        }
+        else{
+        return (num1+1)  +  ", "  +  numberBetweenUs (num1+1,num2) ;}
+
+//  2, 3, 
+
+    }
+
+
+
+//  exe 10
+
+
+function countDown (num) {
+
+    if (num===0)
+    return "done"
+
+    return (num + ", " + countDown(num-1)  )
+
+}
+
+
+//  exe 11
+function multiplication2 (num1,num2) {
+ if (num2===0)
+ {return 0;}
+ 
+
+
+ return num1+ multiplication2 (num1,num2-1);
+
+}
+
+
+//  exe 11-b
+
+function mod2 (num1,num2) {
+
+
+    if (num1 < num2)
+    return num1 ;
+
+
+    return mod2(num1-num2 , num2 );
+
+}
+
+// exe 12 
+
+function mirror (str) {
+
+
+
+    if (str.length===0)
+    {
+
+        return "";
+    }
+
+    var res = str.slice(0, -1);
+
+
+ return (str[res.length]+ "" + mirror(res)  )
+
+
+}
+
+// 13
+
+function m2 (str) {
+     
+    if (str.length===0)
+    {
+
+        return "";
+    }
+
+    var res = str.slice(0, -1);
+
+var control = str[res.length];
+
+    if (control===control.toUpperCase()){
+
+        control= control.toLowerCase();
+}
+else
+{
+    control=  control.toUpperCase();
+
+}
+
+
+ return (control+ "" + m2(res)  )
+
+
+}
+
+//  ex 14
+
+
+function repeatChar (str1 , char) {
+
+    if (str1.length==0)
+    return sum;
+
+  
+    if (char === str1[str1.length-1]){
+        
+    }
+
+    str1 = str1.slice(0,-1);
+
+    return repeatChar ( str1,char );
+
+}
